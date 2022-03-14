@@ -1,13 +1,25 @@
 package controllers
 
-import(
+import (
+	"example.com/m/v2/models"
+
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
+
+var UsersModel = new(models.Users)
 
 type UserController struct{}
 
-func (u UserController) GetAll(ctx *gin.Context){
-	ctx.JSON(http.StatusOK, gin.H{"a":"a"})
+func (u UserController) GetAll(ctx *gin.Context) {
+
+	result, err := UsersModel.GetAll()
+
+	if err != nil {
+		ctx.Error(err)
+		return
+	}
+
+	ctx.JSON(200, result)
+
 	return
 }

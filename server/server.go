@@ -1,8 +1,6 @@
 package server
 
-
-func Init(){
-	// config :=
+func Init() {
 	router := NewRouter()
 
 	router.Run()

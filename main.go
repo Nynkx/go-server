@@ -8,15 +8,6 @@ import (
 	"example.com/m/v2/server"
 )
 
-// type Users struct{
-// 	Users []User `json:"users"`
-// }
-
-// type User struct{
-// 	User_name string `json:"user_name"`
-// 	Email string     `json:"email"`
-// }
-
 // func handlePing(ctx *gin.Context){
 
 // 	jsonFile, err := os.Open("test.json");
